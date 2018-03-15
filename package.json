@@ -18,12 +18,22 @@
     "react-dom": "^16.2.0",
     "style-loader": "^0.20.3",
     "web3": "^0.20.0",
-    "webpack": "^4.1.1"
+    "webpack": "^3.11.0",
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-server": "^3.1.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dotrungkien/ethereum-dapp-sample.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dotrungkien/ethereum-dapp-sample/issues"
+  },
+  "homepage": "https://github.com/dotrungkien/ethereum-dapp-sample#readme"
 }
