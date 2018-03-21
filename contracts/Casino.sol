@@ -47,6 +47,7 @@ contract Casino {
         numberOfBets++;
         players.push(msg.sender);
         totalBet += msg.value;
+        if (numberOfBets >= 3) generateNumberWinner();
     }
 
     function generateNumberWinner() public {
@@ -77,7 +78,7 @@ contract Casino {
         }
     }
 
-    function resetDta() public {
+    function resetData() public {
         players.length = 0;
         totalBet = 0;
         numberOfBets = 0;
@@ -86,3 +87,5 @@ contract Casino {
 
 
 // 0x393530653a329cb0c54234bdf3c36c0cfbbe7a76
+
+// gateway.ipfs.io/ipns/QmaMF5WYZkgFeWudFRVVFhG8a7tzKSTqiK4xBRZkUt3Yqa
