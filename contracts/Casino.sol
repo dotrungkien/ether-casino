@@ -5,7 +5,7 @@ contract Casino {
     uint256 public minimumBet;
     uint256 public totalBet;
     uint256 public numberOfBets;
-    uint256 public maxAmountOfBets = 100;
+    uint256 public maxAmountOfBets = 3;
     address[] public players;
 
     struct Player {
@@ -47,7 +47,7 @@ contract Casino {
         numberOfBets++;
         players.push(msg.sender);
         totalBet += msg.value;
-        if (numberOfBets >= 3) generateNumberWinner();
+        if (numberOfBets >= maxAmountOfBets) generateNumberWinner();
     }
 
     function generateNumberWinner() public {
@@ -76,6 +76,7 @@ contract Casino {
                 winners[j].transfer(winnerEtherAmount);
             }
         }
+        resetData();
     }
 
     function resetData() public {
@@ -87,5 +88,3 @@ contract Casino {
 
 
 // 0x393530653a329cb0c54234bdf3c36c0cfbbe7a76
-
-// gateway.ipfs.io/ipns/QmaMF5WYZkgFeWudFRVVFhG8a7tzKSTqiK4xBRZkUt3Yqa
